@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BLc-k5-Bnd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="8092"/>
+    </dependencies>
+    <scenes>
+        <!--Counter-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller identifier="counter" title="Counter" id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchApp" customModuleProvider="target">
+                    <items>
+                        <label width="109.5" alignment="center" text="0" textAlignment="center" id="BYD-IA-Ibe"/>
+                        <button width="1" alignment="left" title="Increment" id="Xo5-rH-qcv">
+                            <connections>
+                                <action selector="incrementAction" destination="AgC-eL-Hgc" id="9XQ-6C-jw0"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="counterLabel" destination="BYD-IA-Ibe" id="hFp-G2-ipt"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="223" y="170"/>
+        </scene>
+        <!--Force Touch-->
+        <scene sceneID="cBB-LA-ld3">
+            <objects>
+                <controller identifier="force touch" title="Force Touch" hidesWhenLoading="NO" id="tB0-N4-sjX" customClass="ForceTouchInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label alignment="center" verticalAlignment="center" text="Please, use force touch" id="EcZ-71-lgM">
+                            <fontDescription key="font" type="system" pointSize="11"/>
+                        </label>
+                    </items>
+                    <menu key="menu" id="myW-Fx-EhS">
+                        <items>
+                            <menuItem title="Menu Item" icon="accept" id="MxL-mp-OAm">
+                                <connections>
+                                    <action selector="action1" destination="tB0-N4-sjX" id="5FN-0n-h5V"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item" icon="add" id="UoV-F3-BjF">
+                                <connections>
+                                    <action selector="action2" destination="tB0-N4-sjX" id="Ycb-YY-OL9"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item" icon="block" id="RBR-vf-Fya">
+                                <connections>
+                                    <action selector="action3" destination="tB0-N4-sjX" id="VXw-9a-r8O"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Menu Item" icon="decline" id="61d-Zj-edM">
+                                <connections>
+                                    <action selector="action4" destination="tB0-N4-sjX" id="S9H-35-saX"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="textLabel" destination="EcZ-71-lgM" id="xge-Do-mj6"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="440" y="170"/>
+        </scene>
+        <!--regular-->
+        <scene sceneID="ckw-NJ-hi0">
+            <objects>
+                <controller identifier="regular" hidesWhenLoading="NO" id="WUv-Dz-uO8" customClass="NewPriceInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label height="44" alignment="center" text="Regular" id="yKZ-BV-IQg">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <picker width="1" height="49" alignment="left" focusStyle="sequence" id="EOo-Rn-ra6"/>
+                    </items>
+                    <connections>
+                        <outlet property="pricePicker" destination="EOo-Rn-ra6" id="eVy-Sr-o5K"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="440" y="410"/>
+        </scene>
+        <!--update prices 2-->
+        <scene sceneID="N8A-JT-Atz">
+            <objects>
+                <controller identifier="update prices 2" hidesWhenLoading="NO" id="qoh-HH-FtN" customClass="UpdatePricesInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" verticalAlignment="center" layout="vertical" id="Evc-t1-FKN">
+                            <items>
+                                <picker width="1" height="47" alignment="left" focusStyle="sequence" id="ryh-aj-abW"/>
+                                <picker width="1" height="47" alignment="left" focusStyle="sequence" id="Djw-Je-DeR"/>
+                                <picker width="1" height="47" alignment="left" focusStyle="sequence" id="FRy-JL-u8b"/>
+                            </items>
+                        </group>
+                    </items>
+                    <connections>
+                        <outlet property="picker1" destination="ryh-aj-abW" id="dVc-E6-jMm"/>
+                        <outlet property="picker2" destination="Djw-Je-DeR" id="Vz1-qg-BGu"/>
+                        <outlet property="picker3" destination="FRy-JL-u8b" id="tXU-3z-z0y"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="629" y="146"/>
+        </scene>
+        <!--medium-->
+        <scene sceneID="bPA-OS-yk1">
+            <objects>
+                <controller identifier="medium" hidesWhenLoading="NO" id="uCn-Xs-S9u" customClass="NewPriceInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label height="44" alignment="center" text="Medium" id="OD7-9i-C2V">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <picker width="1" height="49" alignment="left" focusStyle="sequence" id="0d3-HC-rr5"/>
+                    </items>
+                    <connections>
+                        <outlet property="pricePicker" destination="0d3-HC-rr5" id="9Ca-nB-79U"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="654" y="410"/>
+        </scene>
+        <!--premium-->
+        <scene sceneID="Vrx-w9-dtj">
+            <objects>
+                <controller identifier="premium" hidesWhenLoading="NO" id="Bbb-vh-DlD" customClass="NewPriceInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label height="44" alignment="center" text="Premium" id="Kk7-wB-M6G">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <picker width="1" height="49" alignment="left" focusStyle="sequence" id="aUj-Cr-AqM"/>
+                        <group width="1" height="6" alignment="left" id="rnJ-Dy-Lcc"/>
+                        <button width="1" alignment="left" title="Done" id="pxw-uX-1cM">
+                            <connections>
+                                <action selector="doneAction" destination="Bbb-vh-DlD" id="AHr-47-NSr"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="pricePicker" destination="aUj-Cr-AqM" id="SO2-2N-DAM"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="870" y="353"/>
+        </scene>
+        <!--Timer-->
+        <scene sceneID="uec-PL-F7B">
+            <objects>
+                <controller identifier="timer" title="Timer" hidesWhenLoading="NO" id="Rri-ga-To5" customClass="TimerInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <group width="1" alignment="left" id="MIb-a2-SgU">
+                            <items>
+                                <button width="59" alignment="left" title="Play" id="bDl-7i-F7o">
+                                    <connections>
+                                        <action selector="startTimer" destination="Rri-ga-To5" id="Y4d-KH-VJc"/>
+                                    </connections>
+                                </button>
+                                <button width="59" alignment="right" title="Pause" id="Lbn-sS-YB6">
+                                    <connections>
+                                        <action selector="pauseTimer" destination="Rri-ga-To5" id="cyv-bD-F6X"/>
+                                    </connections>
+                                </button>
+                            </items>
+                        </group>
+                        <timer width="1" height="51.5" alignment="left" textAlignment="center" id="fbQ-yM-Arx"/>
+                        <button width="59" alignment="right" title="Reset" id="u01-3a-S8p">
+                            <connections>
+                                <action selector="resetTimer" destination="Rri-ga-To5" id="J3r-aZ-3nd"/>
+                            </connections>
+                        </button>
+                    </items>
+                    <connections>
+                        <outlet property="timer" destination="fbQ-yM-Arx" id="e80-WU-O5e"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-1" y="430"/>
+        </scene>
+        <!--Geoip-->
+        <scene sceneID="6CW-EP-vkR">
+            <objects>
+                <controller identifier="geoip" title="Geoip" hidesWhenLoading="NO" id="jme-J7-N1u" customClass="GeoipInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <label alignment="left" text="Watch" id="lkA-YO-SdQ">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label width="1" height="32.5" alignment="left" text="ip" textAlignment="center" id="xZD-b7-Ds0">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label alignment="left" text="iPhone" id="v0n-Zc-zJ0">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                        <label width="1" height="32.5" alignment="left" text="cidade" textAlignment="center" id="8Wg-Fe-Cm2">
+                            <fontDescription key="font" style="UICTFontTextStyleSubhead"/>
+                        </label>
+                    </items>
+                    <connections>
+                        <outlet property="labelCidade" destination="8Wg-Fe-Cm2" id="ndh-PD-mtx"/>
+                        <outlet property="labelGeoip" destination="xZD-b7-Ds0" id="44e-V0-uJz"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="223" y="410"/>
+        </scene>
+        <!--Menu-->
+        <scene sceneID="b9w-SE-cV2">
+            <objects>
+                <controller title="Menu" hidesWhenLoading="NO" id="BLc-k5-Bnd" customClass="MenuInterfaceController" customModule="WatchApp_Extension">
+                    <items>
+                        <table alignment="left" id="jlY-Ea-3Sq">
+                            <items>
+                                <tableRow identifier="CellMenu" id="UV9-pf-5XX" customClass="CellMenu" customModule="WatchApp_Extension">
+                                    <group key="rootItem" width="1" alignment="left" id="0KM-Yx-WDb">
+                                        <items>
+                                            <label width="131.5" height="42.5" alignment="left" text="Label" id="g9g-PV-NWI"/>
+                                        </items>
+                                    </group>
+                                    <connections>
+                                        <outlet property="textLabel" destination="g9g-PV-NWI" id="dtg-Xi-fvQ"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="table" destination="jlY-Ea-3Sq" id="VhS-7L-dAf"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="-1" y="170"/>
+        </scene>
+    </scenes>
+</document>
